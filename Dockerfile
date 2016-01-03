@@ -1,7 +1,8 @@
 FROM alpine:latest
 MAINTAINER Matt Bentley <mbentley@mbentley.net>
 
-RUN apk --update add ca-certificates python py-pip wget && rm -rf /var/cache/apk/*
+#RUN apk --update add ca-certificates python py-pip wget && rm -rf /var/cache/apk/*
+RUN apk --update add ca-certificates py-pygments wget && rm -rf /var/cache/apk/*
 
 ENV HUGO_VER 0.15
 
@@ -14,7 +15,7 @@ RUN wget https://github.com/spf13/hugo/releases/download/v${HUGO_VER}/hugo_${HUG
   chmod +x /usr/local/bin/hugo &&\
   mkdir /data
 
-RUN pip install Pygments
+#RUN pip install Pygments
 
 WORKDIR /data
 
