@@ -8,6 +8,15 @@ To pull this image:
 `docker pull mbentley/hugo`
 
 Example usage:
+
 `docker run -it --rm mbentley/hugo --help`
 
-`docker run -it --rm -p 1313:1313 -v /data/mysite:/data mbentley/hugo server --bind 0.0.0.0`
+Run server for development
+
+`docker run -it --rm -u "$(shell id -u):$(shell id -g)" -p 1313:1313 -v /data/mysite:/data mbentley/hugo server --bind 0.0.0.0`
+
+Build site
+
+`docker run -it --rm -u "$(shell id -u):$(shell id -g)" -v /data/mysite:/data mbentley/hugo -v`
+
+Make sure to run the above commands with the `-u` and `-g` parameters otherwise you may end up with files that have been written as `root:root`
