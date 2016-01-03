@@ -1,8 +1,7 @@
 FROM alpine:latest
 MAINTAINER Matt Bentley <mbentley@mbentley.net>
 
-#RUN apk --update add ca-certificates python py-pip wget && rm -rf /var/cache/apk/*
-RUN apk --update add ca-certificates py-pygments wget && rm -rf /var/cache/apk/*
+RUN apk --update add ca-certificates py-pygments py-setuptools wget && rm -rf /var/cache/apk/*
 
 ENV HUGO_VER 0.15
 
