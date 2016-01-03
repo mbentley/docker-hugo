@@ -1,7 +1,7 @@
 mbentley/hugo
 ==================
 
-docker image for hugo
+docker image for [hugo](https://gohugo.io/)
 based off of alpine:latest
 
 To pull this image:
