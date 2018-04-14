@@ -20,4 +20,4 @@ RUN mkdir /tmp/hugo &&\
 WORKDIR /data
 
 ENTRYPOINT ["/usr/local/bin/hugo"]
-CMD ["--help"]
+CMD [""]
