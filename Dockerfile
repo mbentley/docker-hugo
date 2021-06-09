@@ -3,6 +3,8 @@ MAINTAINER Matt Bentley <mbentley@mbentley.net>
 
 RUN apk --no-cache add ca-certificates py-pygments py-setuptools wget
 
+ARG HUGO_VER
+
 RUN apk --no-cache add jq &&\
   HUGO_VER="$(wget -q -O - https://api.github.com/repos/gohugoio/hugo/releases/latest | jq -r .name | awk -F 'v' '{print $2}')" &&\
   mkdir /tmp/hugo &&\
