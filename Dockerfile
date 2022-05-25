@@ -2,7 +2,7 @@
 FROM mbentley/alpine:latest
 LABEL maintainer="Matt Bentley <mbentley@mbentley.net>"
 
-RUN apk --no-cache add ca-certificates py-pygments py-setuptools wget
+RUN apk --no-cache add ca-certificates libc6-compat py-pygments py-setuptools wget
 
 ARG HUGO_VER
 
